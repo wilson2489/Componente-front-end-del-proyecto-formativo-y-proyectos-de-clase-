@@ -1,0 +1,68 @@
+/* styles.css */
+
+body {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+.nav-link:hover {
+    color: #00c6ff !important;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #0056b3;
+    border-radius: 10px;
+}
+
+/* Card/Form */
+.card-custom {
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.btn-custom {
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
+}
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 10px;
+    padding: 5px;
+    transition: background-color 300ms;
+}

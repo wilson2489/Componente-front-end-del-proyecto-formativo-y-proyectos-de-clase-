@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados Médicos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+  <div class="max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Información del Paciente y Resultados -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-blue-700">Resultados Médicos</h2>
+      
+      <div class="space-y-2">
+        <p><span class="font-semibold">Paciente:</span> Juan Pérez</p>
+        <p><span class="font-semibold">ID:</span> 001245</p>
+        <p><span class="font-semibold">Edad:</span> 35 años</p>
+        <p><span class="font-semibold">Fecha:</span> 04/04/2025</p>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="font-semibold text-lg text-gray-800">Resultados de Análisis</h3>
+        <ul class="list-disc pl-5 text-gray-700">
+          <li>Hemoglobina: 14.2 g/dL</li>
+          <li>Glucosa: 89 mg/dL</li>
+          <li>Colesterol: 180 mg/dL</li>
+          <li>Presión Arterial: 120/80 mmHg</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Lienzo -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-gray-800">Imagen / Lienzo</h3>
+      <canvas id="medicalCanvas" width="500" height="400" class="border-2 border-gray-300 rounded-xl bg-white shadow-inner w-full h-auto"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Script opcional para dibujar en el canvas -->
+  <script>
+    const canvas = document.getElementById("medicalCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Dibujo simple (círculo rojo simulando una marca médica)
+    ctx.fillStyle = "red";
+    ctx.beginPath();
+    ctx.arc(250, 200, 20, 0, Math.PI * 2);
+    ctx.fill();
+  </script>
+</body>
+</html>

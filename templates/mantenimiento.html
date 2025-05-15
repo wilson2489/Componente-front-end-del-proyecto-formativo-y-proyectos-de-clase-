@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mantenimiento de Herramientas Médicas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+  <div class="max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Información de Herramienta Médica -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-blue-700">Mantenimiento de Herramientas Médicas</h2>
+
+      <div class="space-y-2">
+        <p><span class="font-semibold">Nombre de Herramienta:</span> Monitor de signos vitales</p>
+        <p><span class="font-semibold">Código:</span> HT-0321</p>
+        <p><span class="font-semibold">Ubicación:</span> Sala 3 - Unidad de Cuidados Intensivos</p>
+        <p><span class="font-semibold">Último mantenimiento:</span> 15/03/2025</p>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="font-semibold text-lg text-gray-800">Observaciones Técnicas</h3>
+        <ul class="list-disc pl-5 text-gray-700">
+          <li>Calibración correcta</li>
+          <li>Sin errores de software</li>
+          <li>Revisión de cables y conexiones: OK</li>
+          <li>Limpieza profunda realizada</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Lienzo para imagen técnica / esquema -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-gray-800">Esquema / Lienzo Técnico</h3>
+      <canvas id="toolCanvas" width="500" height="400" class="border-2 border-gray-300 rounded-xl bg-white shadow-inner w-full h-auto"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Script opcional para dibujo en canvas -->
+  <script>
+    const canvas = document.getElementById("toolCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Dibujo representativo de herramienta (ej. caja y cables)
+    ctx.strokeStyle = "#4B5563";
+    ctx.lineWidth = 2;
+
+    // Caja principal
+    ctx.strokeRect(150, 100, 200, 150);
+
+    // Cables simulados
+    ctx.beginPath();
+    ctx.moveTo(250, 250);
+    ctx.lineTo(250, 300);
+    ctx.stroke();
+  </script>
+</body>
+</html>

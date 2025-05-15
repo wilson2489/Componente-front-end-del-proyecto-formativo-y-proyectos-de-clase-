@@ -1,0 +1,11 @@
+@app.route('/usuarios')
+def usuarios():
+    if "usuario" not in session:
+        flash("Debes iniciar sesión para acceder.", "warning")
+        return redirect(url_for("index"))
+
+    # Obtener la lista de usuarios registrados
+    lista_usuarios = list(usuarios_db.keys())
+
+    return render_template('usuarios.html', usuario=session["usuario"], usuarios=lista_usuarios)
+
